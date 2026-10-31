@@ -1,229 +1,289 @@
-# 01 - Introduction to C Programming & Hello World
+# Lesson 01 — Introduction to C Programming
 
-> **Learning Source:** Bro Code - C Programming  
-> **Language:** C  
-> **Difficulty:** Beginner  
-> **Status:** In Progress
+## Learning Objectives
 
----
-
-## 1. Learning Objectives
+By the end of this lesson, I should be able to:
 
 - [ ] Understand what C programming is.
-- [ ] Understand what a compiler does.
-- [ ] Understand what an IDE is.
+- [ ] Explain what a compiler does.
+- [ ] Identify the purpose of an IDE and development environment.
 - [ ] Understand the basic structure of a C program.
-- [ ] Identify the purpose of `#include <stdio.h>`.
-- [ ] Understand the `main()` function.
-- [ ] Understand how `printf()` displays output.
-- [ ] Successfully create and run my first C program.
+- [ ] Write and run my first C program.
+- [ ] Understand `#include`, `main()`, `printf()`, and `return 0`.
+- [ ] Compile and execute a C program using GCC.
 
-## 2. Concept Overview
+## 1. What Is C?
 
-### What is C?
+C is a general-purpose programming language used to create software and interact with computer hardware.
 
-Write your explanation here.
+It is known for its speed, efficiency, and control over system resources.
 
-### What is a Compiler?
+C is commonly used in:
 
-Explain how a compiler translates source code into machine code.
+- Operating systems
+- Embedded systems
+- Compilers
+- System software
+- Performance-critical applications
 
-### What is an IDE?
+## 2. Understanding the Development Tools
 
-Explain what an Integrated Development Environment does.
-
-### Development Environment
-
-| Component | Name |
+| Tool | Purpose |
 |---|---|
-| IDE | |
-| Compiler | |
-| Operating System | |
+| VS Code | Code editor that can be configured as an IDE |
+| Notepad++ | Text editor |
+| MSYS2 | Development environment and package manager |
+| GCC | C compiler |
+
+A compiler translates C source code into a form the computer can execute.
+
+An IDE combines tools that help developers write, build, and debug programs.
 
 ## 3. Understanding the Structure of C
 
-### 3.1 Preprocessor Directives
+A basic C program looks like this:
 
-**Topic:** `#include <stdio.h>`
+\`\`\`c
+#include <stdio.h>
 
-**Explanation:**
+int main(void)
+{
+    printf("Hello, GitHub!");
 
-Write your explanation here.
-
-### 3.2 The Main Function
-
-**Topic:** `int main() { }`
-
-**Explanation:**
-
-Write your explanation here.
-
-### 3.3 Printing Output
-
-**Topic:** `printf()`
-
-**Explanation:**
-
-Write your explanation here.
-
-### 3.4 Statement Terminators
-
-**Topic:** Semicolon (`;`)
-
-**Explanation:**
-
-Write your explanation here.
-
-## 4. My First C Program
-
-### Original Code
-
-Insert your code here.
+    return 0;
+}
+\`\`\`
 
 ### Code Breakdown
 
-| Component | Purpose |
+| Code | Explanation |
 |---|---|
-| `#include <stdio.h>` | |
-| `int main()` | |
-| `{ }` | |
-| `printf()` | |
-| `;` | |
-| `return 0;` | |
+| `#include <stdio.h>` | Includes standard input/output declarations. |
+| `int main(void)` | Defines the main function, where program execution begins. |
+| `{ }` | Marks the beginning and end of the function body. |
+| `printf()` | Displays formatted output. |
+| `return 0;` | Indicates that the program finished successfully. |
 
-### Expected Output
+### Important Concepts
 
-Insert expected output here.
+- `#include` is a preprocessor directive.
+- `main()` is the entry point of a C program.
+- `printf()` displays output.
+- A semicolon (`;`) terminates many C statements.
+- `return 0` conventionally indicates successful execution.
 
-### Actual Output
+## 4. My First C Program
 
-Insert actual output here.
+\`\`\`c
+#include <stdio.h>
 
-## 5. Experiments & Exploration
+int main(void)
+{
+    printf("Hello, GitHub!");
 
-### Experiment 1 - Change the Message
+    return 0;
+}
+\`\`\`
 
-**Objective:** Modify the displayed message.
+Expected Output:
 
-**My Code:**
+\`\`\`text
+Hello, GitHub!
+\`\`\`
 
-Insert code here.
+## 5. Experiments
 
-**Output:**
+### Experiment 1 — Change the Message
 
-Insert output here.
+Change the text inside `printf()`.
 
-### Experiment 2 - Multiple Messages
+\`\`\`c
+#include <stdio.h>
 
-**Objective:** Display multiple messages.
+int main(void)
+{
+    printf("Welcome, to my repo!");
 
-**My Code:**
+    return 0;
+}
+\`\`\`
 
-Insert code here.
+Expected Output:
 
-**Output:**
+\`\`\`text
+Welcome, to my repo!
+\`\`\`
 
-Insert output here.
 
-### Experiment 3 - Break Something
+### Experiment 2 — Multiple Messages
 
-**Objective:** Intentionally introduce an error and observe what happens.
+Try displaying multiple messages.
 
-**What I Changed:**
+\`\`\`c
+#include <stdio.h>
 
-Write here.
+int main(void)
+{
+    printf("To Buy List\n");
+    printf("Milk\n");
+    printf("Egg\n");
+    printf("Canned Tuna\n");
+    printf("Juice\n");
 
-**What Happened:**
+    return 0;
+}
+\`\`\`
 
-Write here.
+Expected Output:
+
+\`\`\`text
+To Buy List
+Milk
+Egg
+Canned Tuna
+Juice
+\`\`\`
+
+### Experiment 3 — Break the Program
+
+Remove a semicolon and observe the compiler error.
+
+\`\`\`c
+#include <stdio.h>
+
+int main(void)
+{
+    printf("Hello, GitHub!")
+
+    return 0;
+}
+\`\`\`
+
+Expected Output:
+
+\`\`\`text
+error: expected ';' before 'return'
+\`\`\`
 
 ## 6. Practice Challenges
 
-### Challenge 1 - Personal Introduction
+### Challenge 1 — Personal Introduction
 
-Create a program that displays a short introduction about yourself.
+Create a program that displays:
 
-**My Solution:**
+- Your name
+- Your age
+- Your current learning goal
 
-Insert code here.
+\`\`\`c
+#include <stdio.h>
 
-### Challenge 2 - ASCII Art
+int main(void)
+{
+    printf("Name: Rayce Manuel E. Fillon\n");
+    printf("Age: 19\n");
+    printf("Goal: To become proficient in C programming.\n");
 
-Create a small ASCII design using printed characters.
+    return 0;
+}
+\`\`\`
 
-**My Solution:**
+Expected Output:
 
-Insert code here.
+\`\`\`
+Name: Rayce Manuel E. Fillon
+Age: 19
+Goal: To become proficient in C programming.
+\`\`\`
 
-### Challenge 3 - Multi-Line Display
 
-Create a program that displays at least five separate lines of information.
+### Challenge 2 — ASCII Art
 
-**My Solution:**
+Create a simple design using text characters.
 
-Insert code here.
+### Challenge 3 — Multi-Line Display
 
-## 7. Hidden Challenge - The Rule Breaker
+Use `\n` to display multiple lines of text.
 
-**Mission:** Display `Hello, World!` without using `printf()`.
+Example:
 
-**Restrictions:**
+\`\`\`c
+printf("Hello!\n");
+printf("Welcome to my C journey.\n");
+printf("Let's start coding!\n");
+\`\`\`
 
-- Do not use `printf()`.
-- Use standard C functionality.
-- Find another legitimate way to display text.
+## 7. Hidden Challenge
 
-**My Attempt:**
+Display `Hello, World!` without using `printf()`.
 
-Insert code here.
+Research standard C functionality and experiment with another output method.
 
-**What I Discovered:**
+## 8. Final Boss — Terminal Identity Screen
 
-Write your explanation here.
+Create a terminal screen that displays your developer identity.
 
-## 8. Final Boss - Terminal Identity
+Include:
 
-Create a small terminal introduction screen.
-
-**Requirements:**
-
-- Display a title.
-- Display your developer alias.
-- Display your programming language.
-- Display your current learning objective.
-- Include ASCII art.
-
-**My Implementation:**
-
-Insert code here.
+- Your alias
+- A short introduction
+- ASCII art
+- Your current programming journey
 
 ## 9. Knowledge Check
 
-- [ ] Can I explain what a compiler does?
-- [ ] Can I explain the difference between an IDE and a compiler?
-- [ ] Do I understand why we include `stdio.h`?
-- [ ] Can I explain what `main()` does?
-- [ ] Do I understand how `printf()` works?
-- [ ] Can I write and run a basic C program independently?
+Before moving forward, make sure I can explain:
 
-## 10. Development Log
+- [ ] What C programming is.
+- [ ] What a compiler does.
+- [ ] What an IDE is.
+- [ ] What `#include <stdio.h>` does.
+- [ ] Why `main()` is important.
+- [ ] What `printf()` does.
+- [ ] Why semicolons matter.
+- [ ] What `return 0` means.
 
-**What I Learned:**
+## 10. Developer Notes
 
-Write your reflection here.
+### Common Escape Sequences
 
-**What Confused Me:**
+| Escape Sequence | Meaning |
+|---|---|
+| `\n` | New line |
+| `\t` | Horizontal tab |
+| `\\` | Backslash |
+| `\"` | Double quotation mark |
 
-Write your questions here.
+### Compiling with GCC
 
-**What I Want to Explore Next:**
+Compile:
 
-Write future topics here.
+\`\`\`bash
+gcc main.c -o main
+\`\`\`
+
+Run on Windows:
+
+\`\`\`bash
+.\main.exe
+\`\`\`
+
+### Development Log
+
+| Date | Progress | Notes |
+|---|---|---|
+| 11/01/26 | Started Lesson 01 | Introduction to C |
+
+## Lesson Completion Checklist
+
+- [ ] Read the lesson.
+- [ ] Understand the basic concepts.
+- [ ] Write my first C program.
+- [ ] Complete the practice challenges.
+- [ ] Complete the hidden challenge.
+- [ ] Complete the final boss.
+- [ ] Pass the knowledge check.
 
 ---
 
-> **Zrayce.exe**
->
-> First program initiated. The journey begins.
-
-`[ END OF LESSON 01 ]`
+**Next Lesson:** Variables and Data Types in C.
